@@ -13,7 +13,8 @@ const hasUniqueChars = word => {
     }
 }
 
-
+//time complexity = O(1)
+//space complexity = O(1)
 
 console.log(hasUniqueChars("Monday"));
 // -> True
