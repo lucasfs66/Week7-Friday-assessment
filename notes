@@ -1,0 +1,18 @@
+# note for when the extraLargeArray:
+#     insert 779.945458 ms
+#     append 2.115333 ms
+# note for when the largeArray:
+#     insert 6.305917 ms
+#     append 220.542 μs
+# note for when the mediumArray:
+#     insert 192.75 μs
+#     append 747 μs
+# note for when the smallArray:
+#     insert 6.625 μs
+#     append 1.375 μs
+# note for when the tinyArray:
+#     insert 14.667 μs
+#     append 1.75 μs
+
+# I notice that the time get fatest as the size gets smaller. And I also notice that the Insert is almost always slower than the append, that is because on append we use push and on the Insert we use unshift. Push is fast because we put the new elements at the end wich means that just that element need to change or add a index( the rest keep the same), But on the unshift we put the new element at the begging which means the not only we need to change or add new index to the new element but to the rest of the array too.
+# The slower function is the slower because he have the biggest array, which means that is going to take longer to run to all the element.

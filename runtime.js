@@ -56,7 +56,74 @@ perf.start();
 doublerInsert(extraLargeArray);
 let resultsInsert = perf.stop();
 
+//Try it the largeArray
+// first
+
+perf.start();                     // Starts timer
+doublerAppend(largeArray);
+let resultsAppendLarge = perf.stop();  // Stops timer and save time results
+
+//second
+
+perf.start();
+doublerInsert(largeArray);
+let resultsInsertLarge = perf.stop();
+
+
+//Try it the mediumArrray
+//first
+perf.start();                     // Starts timer
+doublerAppend(mediumArray);
+let resultsAppendMedium = perf.stop();  // Stops timer and save time results
+
+//second
+
+perf.start();
+doublerInsert(mediumArray);
+let resultsInsertMedium = perf.stop();
+
+//Try it the smallArray
+//first
+perf.start();                     // Starts timer
+doublerAppend(smallArray);
+let resultsAppendSmall = perf.stop();  // Stops timer and save time results
+
+//second
+
+perf.start();
+doublerInsert(smallArray);
+let resultsInsertSmall = perf.stop();
+
+//Try it the tinyArray
+//first
+perf.start();                     // Starts timer
+doublerAppend(tinyArray);
+let resultsAppendTiny = perf.stop();  // Stops timer and save time results
+
+//second
+
+perf.start();
+doublerInsert(tinyArray);
+let resultsInsertTiny = perf.stop();
+
+
 
 console.log('Results for the extraLargeArray');
 console.log("insert", resultsInsert.preciseWords);
 console.log("append", resultsAppend.preciseWords);
+console.log('--------------------------------------------')
+console.log('Result for the largeArray')
+console.log("insert", resultsInsertLarge.preciseWords);
+console.log("append", resultsAppendLarge.preciseWords);
+console.log('--------------------------------------------')
+console.log('Result for the mediumArray')
+console.log("insert", resultsInsertMedium.preciseWords);
+console.log("append", resultsAppendMedium.preciseWords);
+console.log('--------------------------------------------')
+console.log('Result for the smallArray')
+console.log("insert", resultsInsertSmall.preciseWords);
+console.log("append", resultsAppendSmall.preciseWords);
+console.log('--------------------------------------------')
+console.log('Result for the tinyArray')
+console.log("insert", resultsInsertTiny.preciseWords);
+console.log("append", resultsAppendTiny.preciseWords);
